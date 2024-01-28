@@ -14,12 +14,8 @@ import java.util.stream.Collectors;
 @Service
 public class BeneficiaryServiceImpl implements BeneficiaryService {
 
-    private final TransactionService transactionService;
-
     @Autowired
-    public BeneficiaryServiceImpl(TransactionService transactionService) {
-        this.transactionService = transactionService;
-    }
+    private  TransactionService transactionService;
 
     @Override
     public Map<String, Transaction> getTransactionsByBeneficiaryName() {

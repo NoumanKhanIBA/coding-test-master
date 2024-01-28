@@ -20,9 +20,9 @@ public class TransactionInitializer {
     @PostConstruct
     public void initializeTransactions() {
 
-        log.info("Loading transaction file...");
+        log.info("Fetching transactions from file...");
         transactionService.setTransactions(transactionLoader.loadTransactions());
-        log.info("Transaction file loaded successfully");
+        log.info("Transaction fetched successfully from file");
 
     }
 
